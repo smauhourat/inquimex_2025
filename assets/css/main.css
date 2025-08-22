@@ -248,7 +248,7 @@ h6,
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
 }
 
-#nosotros .btn-productos {
+.btn-principal {
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 1px;
@@ -260,6 +260,11 @@ h6,
     color: #fff;
     background-color: #0235d2;
     border-style: none;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
+    text-decoration: none;
+}
+
+.slider-pic {
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
 }
 
