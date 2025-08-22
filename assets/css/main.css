@@ -1,0 +1,242 @@
+:root {
+    --background-color: #ffffff;
+}
+
+@font-face {
+    font-family: 'URBANE LIGHT';
+    font-style: normal;
+    font-weight: 300;
+    src: url('Urbane-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Urbane';
+    font-style: normal;
+    font-weight: 300;
+    src: url('Urbane-Light.ttf') format('truetype');
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-size: 1rem;
+    line-height: var(--ast-body-line-height, 1.65);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto
+}
+
+.top-bar a {
+    color: var(--background-color) !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.top-bar a:hover {
+    color: color-mix(in srgb, var(--background-color), transparent 25%);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6,
+.site-title,
+.site-title a {
+    font-family: URBANE LIGHT, Helvetica, Arial, sans-serif;
+}
+
+.top-bar {
+    min-height: 50px;
+    color: #fffff8;
+    background-color: #122337;
+    font-size: 15px;
+    /* padding-top: 10px; */
+}
+
+.top-bar .top-info {
+    display: inline-flex;
+    margin-bottom: 1px;
+    /* padding: 4px; */
+}
+
+.top-bar .top-info p {
+    padding-left: 1rem;
+}
+
+.top-bar .top-social-icon {
+    text-align: right;
+    color: var(--background-color);
+    margin-bottom: 1px;
+}
+
+.top-bar .top-social-icon .social-icon-row {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+    justify-content: flex-end;
+}
+
+.top-bar .top-social-icon .social-icon-row p {
+    padding-left: 1rem;
+}
+
+.top-bar-row {
+    display: grid;
+    align-content: center;
+    min-height: 50px;
+}
+
+.top-bar-row p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1180px !important;
+}
+
+.container-top {
+    width: 100%;
+    padding: 10px 20px 0px 20px;
+}
+
+
+.container-header {
+    background-image: linear-gradient(190deg, rgb(2, 53, 210) 33%, rgb(18, 35, 55) 95%);
+}
+
+.navigation-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-column-gap: 20px;
+    overflow-wrap: anywhere;
+}
+
+.header-logo {
+    flex-wrap: nowrap;
+    padding: 2rem 2rem 2rem 0;
+}
+
+.header-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.header-items {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-content: center;
+}
+
+.header-items nav ul {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.header-items nav ul li {
+    line-height: 120px;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+}
+
+.header-items nav ul li a {
+    color: #fffff8;
+    text-decoration: none;
+}
+
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
+    color: #aee8ff;
+}
+
+#hero {
+    /* width: 100%; */
+    /* height: 100vh; */
+    background: url(../images/inicio_web-04.1-04.jpg);
+    /* background-size: cover; */
+    background-position: center center;
+    /*position: relative;*/
+    /* padding-top: 82px; */
+    min-height: 580px;
+}
+
+#hero h1,
+#hero h2 {
+    color: #fffff8;
+}
+
+#hero h1 {
+    font-size: 46px;
+}
+
+#hero p {
+    color: #fffff8;
+    font-size: 20px;
+    padding-top: 1.5rem;
+}
+
+#hero .miscelanea {
+    padding-top: 1rem;
+}
+
+#hero .btn-productos {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #0235d2;
+    border-style: none;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
+}
+
+#hero .btn-contacto {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #0235d2;
+    background-color: #fffff8;
+    border-style: none;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 768px) {
+    .top-bar .top-info {
+        text-align: center;
+        display: inline-block;
+    }
+
+    .top-bar .top-info p {
+        margin-bottom: 1px;
+    }
+
+    .top-bar .top-social-icon {
+        text-align: center;
+    }
+
+
+}
