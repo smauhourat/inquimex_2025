@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades de Productos - Inquímex</title>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Segoe UIU', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: URBANE LIGHT, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            /* background: #3498db; */
+            background: #0235d2;
+            color: white;
+            padding: 20px;
+        }
+
+        /* .card:nth-child(2) .card-header {
+            background: #2ecc71;
+        }
+
+        .card:nth-child(3) .card-header {
+            background: #e74c3c;
+        } */
+
+        .card-title {
+            /* font-size: 1.8rem; */
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-description {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .card-distributor {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* .card:nth-child(2) .card-distributor {
+            border-left-color: #2ecc71;
+        }
+
+        .card:nth-child(3) .card-distributor {
+            border-left-color: #e74c3c;
+        } */
+
+        .catalog-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .catalog-button:hover {
+            background: #1a252f;
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Novedades de Productos</h1>
+            <p class="subtitle">Ofrecemos un porfolio de productos que incluye soluciones para distintas industrias y
+                mercados.</p>
+        </header>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Agua Oxigenada</h2>
+                </div>
+                <div class="card-body">
+                    <img src="assets/images/tribex2-768x547.jpg" alt="Agua Oxigenada"
+                        style="width:100%; height:auto; margin-bottom:15px; border-radius:8px;">
+                    <p class="card-description">El agua oxigenada, también conocida como peróxido de hidrógeno, es un
+                        líquido ligeramente más denso que el agua que se descompone en agua y oxígeno. Sus usos más
+                        comunes son: desinfección, blanqueamiento y limpieza.</p>
+                    <div class="card-distributor">
+                        Inquímex es distribuidor en Argentina de Evonik, líder mundial en especialidades químicas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">DEET</h2>
+                </div>
+                <div class="card-body">
+                    <img src="assets/images/deet2-768x547.jpg" alt="Agua Oxigenada"
+                        style="width:100%; height:auto; margin-bottom:15px; border-radius:8px;">
+                    <p class="card-description">El DEET es un compuesto químico ampliamente utilizado en repelentes de
+                        insectos. Este ingrediente activo ha demostrado ser uno de los más efectivos y duraderos en la
+                        protección contra una amplia variedad de insectos, como mosquitos, garrapatas y otros artrópodos
+                        que pueden transmitir enfermedades.</p>
+                    <div class="card-distributor">
+                        En Inquímex estamos listos para actuar.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">TRIBEX®</h2>
+                </div>
+                <div class="card-body">
+                    <img src="assets/images/tribex-768x547.jpg" alt="Agua Oxigenada"
+                        style="width:100%; height:auto; margin-bottom:15px; border-radius:8px;">
+                    <p class="card-description">Tribex ERD es un novedoso lubricante sólido producido por Drilling
+                        Specialties Chemical. Diseñado bajo los principios de la Tribología, supera las limitaciones de
+                        rendimiento de los lubricantes líquidos comerciales, tanto en formulaciones base agua como base
+                        aceite para operaciones de perforación de pozos petroleros.</p>
+                    <div class="card-distributor">
+                        Inquímex es distribuidor para toda la línea de Drilling Specialties.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="catalog-button">Ver catálogo completo</a>
+    </div>
+</body>
+
+</html>
