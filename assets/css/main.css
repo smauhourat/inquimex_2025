@@ -54,6 +54,26 @@ h6,
     font-family: URBANE LIGHT, Helvetica, Arial, sans-serif;
 }
 
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #0235d2
+}
+
+.section-content {
+    text-align: left;
+    color: #0235d2;
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .top-bar {
     min-height: 50px;
     color: #fffff8;
@@ -194,6 +214,10 @@ h6,
     padding-top: 1rem;
 }
 
+.miscelanea2 {
+    padding-bottom: 1rem;
+}
+
 #hero .btn-productos {
     font-weight: 400;
     font-size: 18px;
@@ -220,6 +244,21 @@ h6,
     margin-top: 30px;
     color: #0235d2;
     background-color: #fffff8;
+    border-style: none;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
+}
+
+#nosotros .btn-productos {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #0235d2;
     border-style: none;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
 }
