@@ -381,6 +381,46 @@ h6,
 }
 
 
+.parallax {
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.familiar-bg {
+    background: transparent url("../images/nuestra-empresa-nueva-banner.jpg") no-repeat scroll center center/center;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+#familiar {
+    background-image: url(../images/nuestra-empresa-nueva-banner.jpg);
+    padding: 0;
+    color: #fff;
+    position: relative;
+    min-height: 350px;
+}
+
+#familiar .overlay {
+    background-image: linear-gradient(360deg, #0235d2 27%, #fffff8 100%);
+}
+
+.section-title-white {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.section-title-white h2 {
+    font-size: 48px;
+}
+
+.section-subtitle-white {
+    padding-top: 40px;
+}
+
 @media (max-width: 768px) {
     .top-bar .top-info {
         text-align: center;
