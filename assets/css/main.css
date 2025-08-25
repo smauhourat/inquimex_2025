@@ -1,5 +1,5 @@
 :root {
-    --background-color: #ffffff;
+    --background-color: #fffff8;
 }
 
 @font-face {
@@ -58,6 +58,13 @@ h6,
     text-align: center;
     padding-bottom: 30px;
     padding-top: 50px;
+    position: relative;
+}
+
+.section-btn-center {
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
     position: relative;
 }
 
@@ -255,7 +262,7 @@ h6,
 
 .counts {
     background: white;
-    padding: 70px 0 40px 0;
+    padding: 40px 0 40px 0;
     font-family: DM Sans, sans-serif;
 }
 
@@ -306,6 +313,74 @@ h6,
     background-image: linear-gradient(354deg, #122337 0%, #0235d2 100%);
 }
 
+.section-subtitle {
+    color: #0235d2;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*
+    CARDS
+*/
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card-product {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-product-header {
+    /* background: #3498db; */
+    background: #0235d2;
+    color: white;
+    padding: 20px;
+}
+
+.card-product-title {
+    /* font-size: 1.8rem; */
+    font-size: 24px;
+    color: #fffff8;
+    margin: 0;
+    text-align: center;
+}
+
+.card-product-body {
+    padding: 25px;
+}
+
+.card-product-description {
+    margin-bottom: 20px;
+    /* color: #555; */
+
+    text-align: left;
+    color: #0235d2;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-product-distributor {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    font-style: italic;
+    color: #555;
+}
+
+
 @media (max-width: 768px) {
     .top-bar .top-info {
         text-align: center;
@@ -320,5 +395,14 @@ h6,
         text-align: center;
     }
 
-
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* @media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+} */
