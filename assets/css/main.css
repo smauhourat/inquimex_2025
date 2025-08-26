@@ -432,6 +432,21 @@ h6,
     padding-top: 40px;
 }
 
+.banner-proveedor-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.banner-proveedor-text h2 {
+    font-size: 40px;
+}
+
+.img-banner {
+    width: 300px;
+}
+
 @media (max-width: 768px) {
     .top-bar .top-info {
         text-align: center;
@@ -448,6 +463,14 @@ h6,
 
     .cards-container {
         grid-template-columns: 1fr;
+    }
+
+    .banner-proveedor-text {
+        padding-top: 30px;
+    }
+
+    .img-banner {
+        width: 190px;
     }
 }
 
