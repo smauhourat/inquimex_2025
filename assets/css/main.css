@@ -47,6 +47,7 @@ textarea {
 h1,
 h2,
 h3,
+h4,
 h5,
 h6,
 .site-title,
@@ -486,6 +487,17 @@ h6,
 .cta-line {
     height: 3px;
     background-color: #aee8ff;
+}
+
+.section-btn-center {
+    padding-bottom: 40px;
+}
+
+.footer {
+    padding: 70px 0px;
+    display: block;
+    color: #fffff8;
+    background-color: #122337;
 }
 
 /*0a36bd*/
