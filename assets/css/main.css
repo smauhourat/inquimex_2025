@@ -1,5 +1,6 @@
 :root {
     --background-color: #fffff8;
+    --swiper-navigation-size: 24px;
 }
 
 @font-face {
@@ -530,6 +531,16 @@ h6,
     width: 100%;
     height: auto;
     /* object-fit: cover; */
+}
+
+.swiper-fig {
+    margin-block-start: 1em;
+    margin-inline-start: 40px;
+}
+
+.swiper-button-prev {
+    z-index: 1 !important;
+    color: tomato !important;
 }
 
 /* 
