@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades de Productos - Inquímex</title>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css' />
+    <!-- Vendors -->
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-centerXXX">
+
+            <!-- Slider main container -->
+            <div class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="assets/images/1-1-150x150.png" class="img-fluid" alt="Logo Cliente1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/2-1-150x150.png" class="img-fluid" alt="Logo Cliente1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/3-150x150.png" class="img-fluid" alt="Logo Cliente1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/4-150x150.png" class="img-fluid" alt="Logo Cliente1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/5-150x150.png" class="img-fluid" alt="Logo Cliente1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/6-150x150.png" class="img-fluid" alt="Logo Cliente1" />
+                    </div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 3,
+            spaceBetween: 50,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
+</body>
+
+</html>
