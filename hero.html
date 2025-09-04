@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero con Fondo Oscurecido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Imagen de fondo */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Capa oscura transparente */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            /* Negro con 60% de opacidad */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <!-- Imagen de fondo -->
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisaje montañoso" class="hero-bg">
+
+        <!-- Contenido de la sección hero -->
+        <div class="hero-content">
+            <h1>Explora los mejores destinos</h1>
+            <p>Descubre lugares increíbles y vive experiencias únicas alrededor del mundo</p>
+            <a href="#" class="btn">Comenzar aventura</a>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>¿Cómo oscurecer una imagen de fondo?</h2>
+        <p>Para oscurecer una imagen de fondo en una sección hero, puedes utilizar el pseudo-elemento
+            <code>::before</code> con un color oscuro semitransparente.
+        </p>
+
+        <p>El código CSS clave es:</p>
+        <pre>
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(100, 0, 0, 1); /* Negro con 60% de opacidad */
+                z-index: 1;
+            }
+        </pre>
+
+        <p>Puedes ajustar el nivel de oscurecimiento modificando el valor de opacidad (0.6 en este ejemplo). Un valor
+            más alto como 0.8 oscurecerá más la imagen, mientras que un valor más bajo como 0.4 la oscurecerá menos.</p>
+
+        <p>También puedes cambiar el color para lograr diferentes efectos. Por ejemplo:</p>
+        <ul>
+            <li><code>rgba(0, 0, 0, 0.6)</code> - Negro transparente (efecto de oscurecimiento)</li>
+            <li><code>rgba(30, 30, 46, 0.6)</code> - Azul oscuro transparente</li>
+            <li><code>rgba(100, 0, 0, 0.6)</code> - Rojo oscuro transparente</li>
+        </ul>
+    </section>
+</body>
+
+</html>
