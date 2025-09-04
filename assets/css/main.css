@@ -40,11 +40,6 @@ textarea {
     transition: 0.3s;
 }
 
-.w-60 {
-    width: 60% !important;
-    border: solid 3px #c02626;
-}
-
 .top-bar a:hover {
     color: color-mix(in srgb, var(--background-color), transparent 25%);
     text-decoration: none;
@@ -456,7 +451,7 @@ h6,
 
 .section-cta {
     background: linear-gradient(11deg, rgb(35 43 76) 10%, rgb(31 36 54) 39%, rgba(35, 53, 117, 1) 64%, rgb(30 53 160) 92%);
-    color: #fffff8
+    color: #fffff8;
 }
 
 .section-cta-white {
@@ -483,7 +478,7 @@ h6,
     text-align: center !important;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .center-banner h3 {
@@ -546,6 +541,13 @@ h6,
     z-index: 1 !important;
     color: rgb(221, 217, 217) !important;
 }
+
+.center-8 {
+    width: 60% !important;
+    /* border: solid 3px #c02626; */
+    margin-bottom: 50px;
+}
+
 
 @media (max-width: 768px) {
     .top-bar .top-info {
