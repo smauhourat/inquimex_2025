@@ -54,7 +54,6 @@
                                 <img src="assets/images/7-150x150.png" class="img-fluid" alt="Logo Unipar" />
                             </figure>
                         </div>
-                        ...
                     </div>
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
@@ -76,8 +75,9 @@
             //     delay: 2500,
             //     disableOnInteraction: false,
             // },
-            slidesPerView: 4,
-            spaceBetween: 5,
+
+            // slidesPerView: 4,
+            // spaceBetween: 5,
 
             // Navigation arrows
             navigation: {
@@ -85,6 +85,28 @@
                 prevEl: '.swiper-button-prev',
             },
 
+            breakpoints: {
+                "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 5
+                },
+                "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 5
+                },
+                "640": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 5
+                },
+                "992": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 5
+                },
+                "1024": {
+                    "slidesPerView": 5,
+                    "spaceBetween": 5
+                }
+            },
 
             // If we need pagination
             pagination: {

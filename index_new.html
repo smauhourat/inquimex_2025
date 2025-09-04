@@ -348,56 +348,59 @@
                     <div class="container">
                         <div class="row justify-content-center">
 
-                            <div class="swiper init-swiper">
-                                <script type="application/json" class="swiper-config">
-                                                                {
-                                                                  "loop": true,
-                                                                  "speed": 600,
-                                                                  "autoplay": {
-                                                                    "delay": 5000
-                                                                  },
-                                                                  "slidesPerView": "auto",
-                                                                  "pagination": {
-                                                                    "el": ".swiper-pagination",
-                                                                    "type": "bullets",
-                                                                    "clickable": true
-                                                                  },
-                                                                  "breakpoints": {
-                                                                    "320": {
-                                                                      "slidesPerView": 2,
-                                                                      "spaceBetween": 10
-                                                                    },
-                                                                    "480": {
-                                                                      "slidesPerView": 3,
-                                                                      "spaceBetween": 60
-                                                                    },
-                                                                    "640": {
-                                                                      "slidesPerView": 3,
-                                                                      "spaceBetween": 60
-                                                                    },
-                                                                    "992": {
-                                                                      "slidesPerView": 4,
-                                                                      "spaceBetween": 60
-                                                                    },
-                                                                    "1024": {
-                                                                      "slidesPerView": 5,
-                                                                      "spaceBetween": 80
-                                                                    }                    
-                                                                  }
-                                                                }
-                                </script>
-                                <div class="swiper-wrapper align-items-center">
-                                    <div class="swiper-slide"><img src="assets/images/1-1-150x150.png" class="img-fluid"
-                                            alt="Aerolineas Argentinas">
+                            <div class="swiper-container">
+                                <!-- Slider main container -->
+                                <div class="swiper mySwiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/1-1-150x150.png" class="img-fluid"
+                                                    alt="Logo Alpat" />
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/2-1-150x150.png" class="img-fluid"
+                                                    alt="Logo Drilling" />
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/3-150x150.png" class="img-fluid"
+                                                    alt="Logo Profertil" />
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/4-150x150.png" class="img-fluid"
+                                                    alt="Logo Basf" />
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/5-150x150.png" class="img-fluid"
+                                                    alt="Logo Evonik" />
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/6-150x150.png" class="img-fluid"
+                                                    alt="Logo Nouryon" />
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure>
+                                                <img src="assets/images/7-150x150.png" class="img-fluid"
+                                                    alt="Logo Unipar" />
+                                            </figure>
+                                        </div>
                                     </div>
-                                    <div class="swiper-slide"><img src="assets/images/2-1-150x150.png" class="img-fluid"
-                                            alt="">
-                                    </div>
-                                    <div class="swiper-slide"><img src="assets/images/3-150x150.png" class="img-fluid"
-                                            alt="">
-                                    </div>
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
                                 </div>
-                                <div class="swiper-pagination" style="margin-top: 50px;"></div>
                             </div>
 
                         </div>
@@ -410,7 +413,7 @@
 
 
     <section id="cta" class="section-cta">
-        <div class="container">
+        <div class="container w-60">
             <div class="row justify-content-center">
                 <div class="section-cta-white center-banner">
                     <p class="section-cta-subtitle-white">
@@ -488,26 +491,6 @@
     </section> -->
 
 
-    <!-- Slider main container -->
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-    </div>
 
     <section id="footer" class="d-flex align-items-center">
         <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
@@ -527,6 +510,61 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
+            // slidesPerView: 4,
+            // spaceBetween: 5,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            breakpoints: {
+                "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 5
+                },
+                "480": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 5
+                },
+                "640": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 5
+                },
+                "992": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 5
+                },
+                "1024": {
+                    "slidesPerView": 5,
+                    "spaceBetween": 5
+                }
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
 
 </body>
 

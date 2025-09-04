@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper sin superposición de imágenes</title>
+
+    <!-- Importar Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+
+        .swiper-slide figure {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .swiper-slide figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: white;
+            opacity: 0.7;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #3498db;
+        }
+
+        .explanation {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .explanation h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .explanation p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .code {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .swiper {
+                height: 350px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Galería con Swiper</h1>
+
+        <!-- Slider principal -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://picsum.photos/id/237/1200/600" alt="Perro negro">
+                        <figcaption>Un lindo perro negro</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://picsum.photos/id/238/1200/600" alt="Ciudad">
+                        <figcaption>Vista de una ciudad</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://picsum.photos/id/239/1200/600" alt="Montañas">
+                        <figcaption>Paisaje montañoso</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://picsum.photos/id/240/1200/600" alt="Playa">
+                        <figcaption>Hermosa playa tropical</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://picsum.photos/id/241/1200/600" alt="Bosque">
+                        <figcaption>Bosque durante el otoño</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Controles de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="explanation">
+            <h2>Cómo evitar que las imágenes se superpongan en Swiper</h2>
+            <p>Para evitar que las imágenes se superpongan en un slider Swiper, es importante:</p>
+
+            <ol>
+                <li>Definir dimensiones claras para el contenedor Swiper y cada slide</li>
+                <li>Usar <code>object-fit: cover</code> para las imágenes</li>
+                <li>Asegurarse de que cada slide tenga <code>overflow: hidden</code></li>
+                <li>Configurar correctamente las opciones de Swiper</li>
+            </ol>
+
+            <p>El CSS clave para las imágenes es:</p>
+            <div class="code">
+                .swiper-slide figure {<br>
+                &nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;height: 100%;<br>
+                &nbsp;&nbsp;margin: 0;<br>
+                &nbsp;&nbsp;padding: 0;<br>
+                &nbsp;&nbsp;position: relative;<br>
+                &nbsp;&nbsp;overflow: hidden;<br>
+                }<br><br>
+
+                .swiper-slide img {<br>
+                &nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;height: 100%;<br>
+                &nbsp;&nbsp;object-fit: cover;<br>
+                &nbsp;&nbsp;display: block;<br>
+                }
+            </div>
+
+            <p>Además, en la configuración de Swiper, es importante establecer parámetros como
+                <code>slidesPerView</code> y <code>spaceBetween</code> para controlar el espaciado entre slides.
+            </p>
+        </div>
+    </div>
+
+    <!-- Importar Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Inicializar Swiper
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 5,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
