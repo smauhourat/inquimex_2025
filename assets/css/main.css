@@ -1,6 +1,6 @@
 :root {
     --background-color: #fffff8;
-    --swiper-navigation-size: 24px;
+    --swiper-navigation-size: 24px !important;
 }
 
 @font-face {
@@ -505,16 +505,15 @@ h6,
 
 
 /*--------------------------------------------------------------
-# proveedores Section
+# Galeria
 --------------------------------------------------------------*/
 
 .swiper {
-    width: auto;
+    /* width: auto; */
     /* width: 600px; */
     /* height: 300px; */
 
 }
-
 
 .swiper-slide {
     text-align: center;
@@ -526,22 +525,27 @@ h6,
     align-items: center;
 }
 
+.swiper-slide figure {
+    /* margin-block-start: 1em; */
+    border: solid 1px #ccc;
+    box-shadow: 4px 4px 10px 0px rgba(217, 217, 217, .5);
+    border-radius: 10px;
+    min-width: 150px;
+}
+
 .swiper-slide img {
-    display: block;
-    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
     height: auto;
-    /* object-fit: cover; */
+    background-color: aqua;
 }
 
-.swiper-fig {
-    margin-block-start: 1em;
-    margin-inline-start: 40px;
-}
-
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-next {
     z-index: 1 !important;
-    color: tomato !important;
+    color: rgb(221, 217, 217) !important;
 }
+
 
 /* 
 

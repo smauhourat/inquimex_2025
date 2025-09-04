@@ -12,49 +12,55 @@
 
 <body>
     <div class="container">
-        <div class="row justify-content-centerXXX">
-
-            <!-- Slider main container -->
-            <div class="swiper mySwiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <figure class="swiper-fig">
-                            <img src="assets/images/1-1-150x150.png" class="img-fluid" alt="Logo Cliente1" />
-                        </figure>
+        <div class="row justify-content-center">
+            <div class="swiper-container">
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/1-1-150x150.png" class="img-fluid" alt="Logo Alpat" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/2-1-150x150.png" class="img-fluid" alt="Logo Drilling" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/3-150x150.png" class="img-fluid" alt="Logo Profertil" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/4-150x150.png" class="img-fluid" alt="Logo Basf" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/5-150x150.png" class="img-fluid" alt="Logo Evonik" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/6-150x150.png" class="img-fluid" alt="Logo Nouryon" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="assets/images/7-150x150.png" class="img-fluid" alt="Logo Unipar" />
+                            </figure>
+                        </div>
+                        ...
                     </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/2-1-150x150.png" class="img-fluid" alt="Logo Cliente1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/3-150x150.png" class="img-fluid" alt="Logo Cliente1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/4-150x150.png" class="img-fluid" alt="Logo Cliente1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/5-150x150.png" class="img-fluid" alt="Logo Cliente1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/6-150x150.png" class="img-fluid" alt="Logo Cliente1" />
-                    </div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                    ...
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-
         </div>
     </div>
 
@@ -65,13 +71,13 @@
         const swiper = new Swiper('.mySwiper', {
             // Optional parameters
             direction: 'horizontal',
-            // loop: true,
+            loop: true,
             // autoplay: {
             //     delay: 2500,
             //     disableOnInteraction: false,
             // },
-            slidesPerView: 3,
-            spaceBetween: 50,
+            slidesPerView: 4,
+            spaceBetween: 5,
 
             // Navigation arrows
             navigation: {
