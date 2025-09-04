@@ -548,8 +548,20 @@ h6,
     margin-bottom: 50px;
 }
 
+.footer-last {
+    padding: 20px 0px;
+    display: block;
+    color: #a8a6a6;
+    background-color: #010102;
+    text-align: center;
+}
+
 
 @media (max-width: 768px) {
+    .footer h6 {
+        padding-top: 30px;
+    }
+
     .top-bar .top-info {
         text-align: center;
         display: inline-block;
