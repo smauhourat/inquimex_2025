@@ -193,55 +193,58 @@ h6,
     color: #aee8ff;
 }
 
-#hero {
-    background: url(../images/inicio_web-04.1-04.jpg);
-    background-position: center center;
-    min-height: 580px;
+.hero {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
     overflow: hidden;
+    min-height: 580px;
 }
 
-#hero::before {
+/* Imagen de fondo */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Capa oscura transparente */
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    background-color: rgba(2, 53, 210, 0.05);
-    /* Overlay negro con 50% de opacidad */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    /* Negro con 60% de opacidad */
+    z-index: -1;
 }
 
-#hero .container-fluid,
-#hero .container,
-#hero .justify-content-center,
-#hero .col-xl-10,
-#hero .row,
-#hero .col-xl-8 {
-    position: relative;
-    z-index: 2;
-    /* Asegura que el contenido esté por encima del overlay */
-}
-
-#hero h1,
-#hero h2 {
+.hero p,
+.hero h1,
+.hero h2 {
     color: #fffff8;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-#hero h1 {
+.hero h1 {
     font-size: 46px;
 }
 
-#hero p {
+.hero p {
     color: #fffff8;
     font-size: 20px;
     padding-top: 1.5rem;
 }
 
-#hero .miscelanea {
+.hero .miscelanea {
     padding-top: 1rem;
 }
 
@@ -249,7 +252,7 @@ h6,
     padding-bottom: 1rem;
 }
 
-#hero .btn-productos {
+.hero .btn-productos {
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 1px;
@@ -264,7 +267,7 @@ h6,
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
 }
 
-#hero .btn-contacto {
+.hero .btn-contacto {
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 1px;
@@ -593,27 +596,12 @@ h6,
     --contrast-color: #ffffff; */
 }
 
-.hero-content {
-    text-align: justify;
-}
-
 @media (max-width: 768px) {
 
     #hero {
         background: url(../images/inicio_tablet-07.jpg);
         background-position: center center;
         min-height: 580px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #hero::before {
-        background-color: rgba(2, 53, 210, 0.5);
-    }
-
-    .hero-content {
-        text-align: center !important;
-
     }
 
     .footer h6 {

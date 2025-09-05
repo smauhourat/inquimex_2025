@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Opacidad del Overlay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Valor inicial de opacidad */
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .controls {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .controls h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-container {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .slider-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .slider-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .slider-value {
+            font-weight: 600;
+            color: #3498db;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 10px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            outline: none;
+            border-radius: 5px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #3498db;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .explanation {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .explanation p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .code {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: monospace;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 60vh;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Control de Opacidad del Overlay</h1>
+            <p class="description">Ajusta la opacidad de la capa oscura sobre la imagen de fondo en tiempo real</p>
+        </header>
+
+        <section class="hero">
+            <!-- Imagen de fondo -->
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisaje montañoso"
+                class="hero-bg">
+
+            <!-- Overlay con opacidad ajustable -->
+            <div class="hero-overlay" id="overlay"></div>
+
+            <!-- Contenido de la sección hero -->
+            <div class="hero-content">
+                <h2>Explora los mejores destinos</h2>
+                <p>Descubre lugares increíbles y vive experiencias únicas alrededor del mundo</p>
+                <a href="#" class="btn">Comenzar aventura</a>
+            </div>
+        </section>
+
+        <div class="controls">
+            <h3>Controles de Opacidad</h3>
+            <div class="control-group">
+                <div class="slider-container">
+                    <div class="slider-info">
+                        <span class="slider-label">Opacidad del overlay:</span>
+                        <span class="slider-value" id="opacity-value">50%</span>
+                    </div>
+                    <input type="range" id="opacity-slider" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h3>¿Cómo funciona?</h3>
+            <p>El control deslizante ajusta la opacidad de la capa oscura superpuesta sobre la imagen de fondo. Esto se
+                logra mediante JavaScript que modifica el valor del canal alfa en el color RGBA.</p>
+
+            <p>El código JavaScript utilizado es:</p>
+            <div class="code">
+                // Obtener elementos del DOM<br>
+                const overlay = document.getElementById('overlay');<br>
+                const slider = document.getElementById('opacity-slider');<br>
+                const valueDisplay = document.getElementById('opacity-value');<br><br>
+
+                // Actualizar overlay cuando se mueve el slider<br>
+                slider.addEventListener('input', function() {<br>
+                &nbsp;&nbsp;const opacity = this.value / 100;<br>
+                &nbsp;&nbsp;overlay.style.background = `rgba(0, 0, 0, ${opacity})`;<br>
+                &nbsp;&nbsp;valueDisplay.textContent = `${this.value}%`;<br>
+                });
+            </div>
+
+            <p>Puedes utilizar este mismo principio para crear overlays de diferentes colores simplemente cambiando los
+                valores RGB en <code>rgba(r, g, b, opacity)</code>.</p>
+        </div>
+    </div>
+
+    <script>
+        // Obtener elementos del DOM
+        const overlay = document.getElementById('overlay');
+        const slider = document.getElementById('opacity-slider');
+        const valueDisplay = document.getElementById('opacity-value');
+
+        // Actualizar overlay cuando se mueve el slider
+        slider.addEventListener('input', function () {
+            const opacity = this.value / 100;
+            overlay.style.background = `rgba(0, 0, 0, ${opacity})`;
+            valueDisplay.textContent = `${this.value}%`;
+        });
+    </script>
+</body>
+
+</html>
