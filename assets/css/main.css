@@ -727,6 +727,16 @@ h6,
     text-align: justify;
 }
 
+@media (max-width: 575px) {
+    .container-header {
+        height: 90px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+}
+
 @media (max-width: 768px) {
 
     .mobile-nav-toggle {
@@ -835,9 +845,9 @@ h6,
         text-align: center !important;
     }
 
-    .logo {
+    /* .logo {
         width: 130px;
-    }
+    } */
 
     .footer h6 {
         padding-top: 30px;
