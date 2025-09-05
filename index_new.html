@@ -17,6 +17,8 @@
 
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Vendors -->
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 </head>
@@ -91,18 +93,20 @@
     </header>
 
     <section id="hero" class="d-flex align-items-center dark-background">
-        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+        <div class="container-fluid">
             <div class="container">
                 <div class="justify-content-center">
                     <div class="col-xl-10">
                         <div class="row hero-content">
                             <div class="col-xl-8">
-                                <h1>Tenemos la Solución</h1>
-                                <h2>que estás buscando</h2>
-                                <img class="miscelanea" width="126px" src="assets/images/miscelanea-3.png">
-                                <p>Empresa de Productos Químicos Industriales</p>
+                                <h1 data-aos="fade-up">Tenemos la Solución</h1>
+                                <h2 data-aos="fade-up" data-aos-delay="50">que estás buscando</h2>
+                                <img data-aos="fade-up" data-aos-delay="100" class="miscelanea" width="126px"
+                                    src="assets/images/miscelanea-3.png">
+                                <p data-aos="fade-up" data-aos-delay="100">Empresa de Productos Químicos Industriales
+                                </p>
                                 <!-- <div class="d-flex justify-content-lg-start column-gap-4"> -->
-                                <div class="hero-content">
+                                <div class="hero-content" data-aos="fade-up">
                                     <div class="btn-productos">
                                         Ver Productos
                                     </div>
@@ -206,7 +210,7 @@
 
 
     <section id="novedades" class="d-flex align-items-center">
-        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+        <div class="container-fluid" data-aos="zoom-out" data-aos-delay="50">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="section-title">
@@ -223,7 +227,7 @@
                         <div class="row g-5">
                             <div class="cards-container">
 
-                                <div class="card-product">
+                                <div class="card-product" data-aos="fade-up" data-aos-delay="50">
                                     <div class="card-product-header">
                                         <h2 class="card-product-title">Agua Oxigenada</h2>
                                     </div>
@@ -245,7 +249,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card-product">
+                                <div class="card-product" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card-product-header">
                                         <h2 class="card-product-title">DEET</h2>
                                     </div>
@@ -268,7 +272,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card-product">
+                                <div class="card-product" data-aos="fade-up" data-aos-delay="150">
                                     <div class="card-product-header">
                                         <h2 class="card-product-title">TRIBEX®</h2>
                                     </div>
@@ -564,6 +568,10 @@
         });
     </script>
     <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script>
+        AOS.init();
+    </script> -->
 
 </body>
 
