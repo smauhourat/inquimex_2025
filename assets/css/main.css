@@ -17,6 +17,13 @@
     src: url('Urbane-Light.ttf') format('truetype');
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Oculta scroll horizontal */
+}
+
 body,
 button,
 input,
