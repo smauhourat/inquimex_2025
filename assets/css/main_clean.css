@@ -524,3 +524,52 @@ h6,
 .banner-proveedor-img {
     width: 300px;
 }
+
+/*--------------------------------------------------------------
+#   Cta Section   
+--------------------------------------------------------------*/
+.section-cta {
+    background: linear-gradient(11deg, rgb(35 43 76) 10%, rgb(31 36 54) 39%, rgba(35, 53, 117, 1) 64%, rgb(30 53 160) 92%);
+    color: #fffff8;
+}
+
+.section-cta-white {
+    text-align: center;
+    padding-top: 80px;
+
+}
+
+.section-cta h2 {
+    font-size: 48px;
+}
+
+.section-cta-white p {
+    text-align: center;
+    color: #fffff8;
+    font-size: 30px;
+}
+
+.section-cta-subtitle-white {
+    padding-top: 20px;
+}
+
+.center-banner {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.center-banner h3 {
+    color: #aee8ff;
+}
+
+.cta-line {
+    height: 3px;
+    background-color: #aee8ff;
+}
+
+.cta-center {
+    width: 60% !important;
+    margin-bottom: 50px;
+}
