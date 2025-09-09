@@ -335,6 +335,9 @@ textarea {
     padding-top: 1.5rem;
 }
 
+.hero-content {
+    text-align: justify;
+}
 
 /*--------------------------------------------------------------
 # General Section
