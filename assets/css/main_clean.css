@@ -640,6 +640,29 @@ h6,
     color: #fffff8;
 }
 
+.cert-iso-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    gap: 5rem;
+}
+
+.cert-iso-card img {
+    width: 200px;
+}
+
+.cert-iso-card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cert-iso-card p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
 @media (max-width: 575px) {
     .container-header {
         height: 90px;
@@ -651,6 +674,14 @@ h6,
 }
 
 @media (max-width: 768px) {
+
+    .card-product-horizontal {
+        flex-direction: column;
+    }
+
+    .cert-iso-card img {
+        width: 120px;
+    }
 
     .mobile-nav-toggle {
         color: #fffff8;
