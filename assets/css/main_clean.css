@@ -570,3 +570,179 @@ h6,
     width: 60% !important;
     margin-bottom: 50px;
 }
+
+/*--------------------------------------------------------------
+#   Footer Section
+--------------------------------------------------------------*/
+.footer {
+    padding: 70px 0px;
+    display: block;
+    color: #fffff8;
+    background-color: #122337;
+}
+
+.footer-last {
+    padding: 20px 0px;
+    display: block;
+    color: #a8a6a6;
+    background-color: #010102;
+    text-align: center;
+}
+
+.footer h6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fffff8;
+}
+
+@media (max-width: 575px) {
+    .container-header {
+        height: 90px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mobile-nav-toggle {
+        color: #fffff8;
+        font-size: 28px;
+        line-height: 0;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .navmenu {
+        padding: 0;
+        z-index: 9997;
+    }
+
+    .navmenu ul {
+        display: none;
+        list-style: none;
+        position: absolute;
+        inset: 60px 20px 20px 20px;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 6px;
+        background-color: #122337;
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 9998;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .navmenu a,
+    .navmenu a:focus {
+        color: #fffff0;
+        padding: 10px 20px;
+        font-family: var(--nav-font);
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    .navmenu .dropdown ul {
+        position: static;
+        display: none;
+        z-index: 99;
+        padding: 10px 0;
+        margin: 10px 20px;
+        background-color: #fffff8;
+        border: 1px solid color-mix(in srgb, #fffff8, transparent 90%);
+        box-shadow: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navmenu .dropdown ul ul {
+        background-color: rgba(33, 37, 41, 0.1);
+    }
+
+    .navmenu .dropdown>.dropdown-active {
+        display: block;
+        background-color: rgba(33, 37, 41, 0.03);
+    }
+
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+
+    .mobile-nav-active .mobile-nav-toggle {
+        color: #fff;
+        position: absolute;
+        font-size: 32px;
+        top: 15px;
+        right: 15px;
+        margin-right: 0;
+        z-index: 9999;
+    }
+
+    .mobile-nav-active .navmenu {
+        position: fixed;
+        overflow: hidden;
+        inset: 0;
+        background: rgba(33, 37, 41, 0.8);
+        transition: 0.3s;
+    }
+
+    .mobile-nav-active .navmenu>ul {
+        display: block;
+    }
+
+    #hero {
+        background: url(../images/inicio_tablet-07.jpg);
+        background-position: center center;
+        min-height: 580px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #hero::before {
+        background-color: rgba(2, 53, 210, 0.5);
+    }
+
+    .hero-content {
+        text-align: center !important;
+    }
+
+    /* .logo {
+        width: 130px;
+    } */
+
+    .footer h6 {
+        padding-top: 30px;
+    }
+
+    .top-bar .top-info {
+        text-align: center;
+        display: inline-block;
+    }
+
+    .top-bar .top-info p {
+        margin-bottom: 1px;
+    }
+
+    .top-bar .top-social-icon {
+        text-align: center;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-proveedor-text {
+        padding-top: 30px;
+    }
+
+    .img-banner {
+        width: 190px;
+    }
+}
