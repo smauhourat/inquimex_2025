@@ -1,6 +1,8 @@
 :root {
     --background-color: #fffff8;
     --accent-color: #0235d2;
+    --secondary-color: #122337;
+    --neutral-color: #010102;
     --swiper-navigation-size: 24px !important;
 }
 
@@ -305,6 +307,14 @@ textarea {
     overflow: hidden;
 }
 
+#hero-merc {
+    background: url(../images/hero-mercados.png);
+    background-position: center center;
+    min-height: 580px;
+    position: relative;
+    overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -317,6 +327,8 @@ textarea {
 }
 
 #hero::before,
+#hero-prod::before,
+#hero-merc::before,
 #hero-us::before {
     content: '';
     position: absolute;
@@ -331,21 +343,27 @@ textarea {
 #hero .container-fluid,
 #hero-us .container-fluid,
 #hero-prod .container-fluid,
+#hero-merc .container-fluid,
 #hero .container,
 #hero-us .container,
 #hero-prod .container,
+#hero-merc .container,
 #hero .justify-content-center,
 #hero-us .justify-content-center,
 #hero-prod .justify-content-center,
+#hero-merc .justify-content-center,
 #hero .col-xl-10,
 #hero-us .col-xl-10,
 #hero-prod .col-xl-10,
+#hero-merc .col-xl-10,
 #hero .row,
 #hero-us .row,
 #hero-prod .row,
+#hero-merc .row,
 #hero .col-xl-8,
 #hero-us .col-xl-8,
-#hero-prod .col-xl-8 {
+#hero-prod .col-xl-8,
+#hero-merc .col-xl-8 {
     position: relative;
     z-index: 2;
     /* Asegura que el contenido esté por encima del overlay */
@@ -354,8 +372,10 @@ textarea {
 #hero h1,
 #hero-us h1,
 #hero-prod h1,
+#hero-merc h1,
 #hero h2,
 #hero-us h2,
+#hero-merc h2,
 #hero-prod h2 {
     color: var(--background-color);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -363,12 +383,14 @@ textarea {
 
 #hero h1,
 #hero-us h1,
+#hero-merc h1,
 #hero-prod h1 {
     font-size: 46px;
 }
 
 #hero p,
 #hero-us p,
+#hero-merc p,
 #hero-prod p {
     color: var(--background-color);
     font-size: 20px;
@@ -677,14 +699,14 @@ h6,
     padding: 70px 0px;
     display: block;
     color: #fffff8;
-    background-color: #122337;
+    background-color: var(--secondary-color);
 }
 
 .footer-last {
     padding: 20px 0px;
     display: block;
     color: #a8a6a6;
-    background-color: #010102;
+    background-color: var(--neutral-color);
     text-align: center;
 }
 
@@ -751,6 +773,61 @@ h6,
 
 #productos ul>li {
     color: var(--accent-color)
+}
+
+/*--------------------------------------------------------------
+# Mercados
+--------------------------------------------------------------*/
+.mercados .icon-box {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    /* background: #252525; */
+    background: var(--accent-color);
+    transition: 0.3s;
+}
+
+.mercados .icon-box:hover {
+    /* background: #2b2b2b; */
+    background: var(--secondary-color);
+}
+
+.mercados .icon-box i {
+    float: left;
+    /* color: #e03a3c; */
+    color: var(--background-color);
+    box-shadow: inset;
+    font-size: 40px;
+}
+
+.mercados .icon-box h4 {
+    margin-left: 70px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.mercados .icon-box h4 a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.mercados .icon-box h4 a:hover {
+    text-decoration: underline;
+}
+
+.mercados .icon-box .icon-box:hover h4 a {
+    color: #e03a3c;
+}
+
+.mercados .icon-box p {
+    margin-left: 70px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.accordion-collapse {
+    transition: all 0.3s;
 }
 
 @media (max-width: 575px) {

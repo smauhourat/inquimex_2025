@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listados de Productos Químicos por Mercado</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+
+        .nav-btn.active {
+            background: var(--accent);
+        }
+
+        .option-section {
+            display: none;
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .option-section.active {
+            display: block;
+        }
+
+        /* Estilos para pestañas (tabs) */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .tab-btn.active {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Estilos para tarjetas (cards) */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .market-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .product-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Estilos para tabla */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .products-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .products-table th {
+            background: var(--primary);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .products-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .products-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .market-header {
+            background: var(--secondary) !important;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Estilos para lista desplegable */
+        .select-container {
+            padding: 20px;
+        }
+
+        .market-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--secondary);
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background: white;
+        }
+
+        .products-list {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para vista de mosaico */
+        .mosaic-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .mosaic-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .mosaic-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mosaic-market {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .cards-container,
+            .mosaic-container {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Productos Químicos por Mercado</h1>
+            <p>Seleccione el formato de visualización preferido</p>
+        </header>
+
+        <div class="nav-options">
+            <button class="nav-btn active" data-target="tabs">Pestañas</button>
+            <button class="nav-btn" data-target="cards">Tarjetas</button>
+            <button class="nav-btn" data-target="table">Tabla</button>
+            <button class="nav-btn" data-target="select">Lista Desplegable</button>
+            <button class="nav-btn" data-target="mosaic">Mosaico</button>
+        </div>
+
+        <!-- Opción 1: Pestañas (Tabs) -->
+        <section id="tabs" class="option-section active">
+            <h2>Visualización por Pestañas</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-market="farmaceutico">Farmacéutico</button>
+                <button class="tab-btn" data-market="cosmetica">Cosmética</button>
+                <button class="tab-btn" data-market="alimenticio">Alimenticio</button>
+                <button class="tab-btn" data-market="agricola">Agrícola</button>
+            </div>
+
+            <div class="tab-content active" id="farmaceutico">
+                <h3>Productos para Industria Farmacéutica</h3>
+                <ul>
+                    <li class="product-item">Paracetamol - USP Grade</li>
+                    <li class="product-item">Ibuprofeno - Grado Farmacéutico</li>
+                    <li class="product-item">Ácido Acetilsalicílico</li>
+                    <li class="product-item">Lactosa Anhidra</li>
+                    <li class="product-item">Ácido Cítrico Monohidratado</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="cosmetica">
+                <h3>Productos para Cosméticos</h3>
+                <ul>
+                    <li class="product-item">Glicerina USP</li>
+                    <li class="product-item">Alcohol Cetílico</li>
+                    <li class="product-item">Aceite de Silicona</li>
+                    <li class="product-item">Propilenglicol</li>
+                    <li class="product-item">Trietanolamina</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="alimenticio">
+                <h3>Productos para Industria Alimenticia</h3>
+                <ul>
+                    <li class="product-item">Ácido Cítrico Anhidro</li>
+                    <li class="product-item">Benzoato de Sodio</li>
+                    <li class="product-item">Sorbato de Potasio</li>
+                    <li class="product-item">Ácido Ascórbico</li>
+                    <li class="product-item">Goma Xantana</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="agricola">
+                <h3>Productos para Agricultura</h3>
+                <ul>
+                    <li class="product-item">Urea Técnica</li>
+                    <li class="product-item">Sulfato de Amonio</li>
+                    <li class="product-item">Nitrato de Potasio</li>
+                    <li class="product-item">Fosfato Diamónico</li>
+                    <li class="product-item">Glifosato</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Opción 2: Tarjetas (Cards) -->
+        <section id="cards" class="option-section">
+            <h2>Visualización por Tarjetas</h2>
+            <div class="cards-container">
+                <div class="market-card">
+                    <div class="card-header">Industria Farmacéutica</div>
+                    <div class="card-body">
+                        <div class="product-item">Paracetamol - USP Grade</div>
+                        <div class="product-item">Ibuprofeno - Grado Farmacéutico</div>
+                        <div class="product-item">Ácido Acetilsalicílico</div>
+                        <div class="product-item">Lactosa Anhidra</div>
+                        <div class="product-item">Ácido Cítrico Monohidratado</div>
+                    </div>
+                </div>
+
+                <div class="market-card">
+                    <div class="card-header">Cosmética</div>
+                    <div class="card-body">
+                        <div class="product-item">Glicerina USP</div>
+                        <div class="product-item">Alcohol Cetílico</div>
+                        <div class="product-item">Aceite de Silicona</div>
+                        <div class="product-item">Propilenglicol</div>
+                        <div class="product-item">Trietanolamina</div>
+                    </div>
+                </div>
+
+                <div class="market-card">
+                    <div class="card-header">Industria Alimenticia</div>
+                    <div class="card-body">
+                        <div class="product-item">Ácido Cítrico Anhidro</div>
+                        <div class="product-item">Benzoato de Sodio</div>
+                        <div class="product-item">Sorbato de Potasio</div>
+                        <div class="product-item">Ácido Ascórbico</div>
+                        <div class="product-item">Goma Xantana</div>
+                    </div>
+                </div>
+
+                <div class="market-card">
+                    <div class="card-header">Agricultura</div>
+                    <div class="card-body">
+                        <div class="product-item">Urea Técnica</div>
+                        <div class="product-item">Sulfato de Amonio</div>
+                        <div class="product-item">Nitrato de Potasio</div>
+                        <div class="product-item">Fosfato Diamónico</div>
+                        <div class="product-item">Glifosato</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opción 3: Tabla -->
+        <section id="table" class="option-section">
+            <h2>Visualización en Tabla</h2>
+            <div class="table-container">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Mercado</th>
+                            <th>Especificaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="market-header">
+                            <td colspan="3">Industria Farmacéutica</td>
+                        </tr>
+                        <tr>
+                            <td>Paracetamol</td>
+                            <td>Farmacéutico</td>
+                            <td>USP Grade</td>
+                        </tr>
+                        <tr>
+                            <td>Ibuprofeno</td>
+                            <td>Farmacéutico</td>
+                            <td>Grado Farmacéutico</td>
+                        </tr>
+
+                        <tr class="market-header">
+                            <td colspan="3">Cosmética</td>
+                        </tr>
+                        <tr>
+                            <td>Glicerina</td>
+                            <td>Cosmética</td>
+                            <td>USP</td>
+                        </tr>
+                        <tr>
+                            <td>Alcohol Cetílico</td>
+                            <td>Cosmética</td>
+                            <td>Grado Técnico</td>
+                        </tr>
+
+                        <tr class="market-header">
+                            <td colspan="3">Industria Alimenticia</td>
+                        </tr>
+                        <tr>
+                            <td>Ácido Cítrico</td>
+                            <td>Alimenticio</td>
+                            <td>Anhidro</td>
+                        </tr>
+                        <tr>
+                            <td>Benzoato de Sodio</td>
+                            <td>Alimenticio</td>
+                            <td>Grado Alimenticio</td>
+                        </tr>
+
+                        <tr class="market-header">
+                            <td colspan="3">Agricultura</td>
+                        </tr>
+                        <tr>
+                            <td>Urea</td>
+                            <td>Agricultura</td>
+                            <td>Técnica</td>
+                        </tr>
+                        <tr>
+                            <td>Sulfato de Amonio</td>
+                            <td>Agricultura</td>
+                            <td>Grado Técnico</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Opción 4: Lista Desplegable -->
+        <section id="select" class="option-section">
+            <h2>Visualización con Lista Desplegable</h2>
+            <div class="select-container">
+                <select class="market-select">
+                    <option value="farmaceutico">Industria Farmacéutica</option>
+                    <option value="cosmetica">Cosmética</option>
+                    <option value="alimenticio">Industria Alimenticia</option>
+                    <option value="agricola">Agricultura</option>
+                </select>
+
+                <div class="products-list" id="product-list">
+                    <h3>Productos para Industria Farmacéutica</h3>
+                    <ul>
+                        <li class="product-item">Paracetamol - USP Grade</li>
+                        <li class="product-item">Ibuprofeno - Grado Farmacéutico</li>
+                        <li class="product-item">Ácido Acetilsalicílico</li>
+                        <li class="product-item">Lactosa Anhidra</li>
+                        <li class="product-item">Ácido Cítrico Monohidratado</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opción 5: Mosaico -->
+        <section id="mosaic" class="option-section">
+            <h2>Visualización en Mosaico</h2>
+            <div class="mosaic-container">
+                <div class="mosaic-item">
+                    <div class="mosaic-market">Industria Farmacéutica</div>
+                    <div class="product-item">Paracetamol - USP Grade</div>
+                    <div class="product-item">Ibuprofeno - Grado Farmacéutico</div>
+                    <div class="product-item">Ácido Acetilsalicílico</div>
+                </div>
+
+                <div class="mosaic-item">
+                    <div class="mosaic-market">Cosmética</div>
+                    <div class="product-item">Glicerina USP</div>
+                    <div class="product-item">Alcohol Cetílico</div>
+                    <div class="product-item">Aceite de Silicona</div>
+                </div>
+
+                <div class="mosaic-item">
+                    <div class="mosaic-market">Industria Alimenticia</div>
+                    <div class="product-item">Ácido Cítrico Anhidro</div>
+                    <div class="product-item">Benzoato de Sodio</div>
+                    <div class="product-item">Sorbato de Potasio</div>
+                </div>
+
+                <div class="mosaic-item">
+                    <div class="mosaic-market">Agricultura</div>
+                    <div class="product-item">Urea Técnica</div>
+                    <div class="product-item">Sulfato de Amonio</div>
+                    <div class="product-item">Nitrato de Potasio</div>
+                </div>
+
+                <div class="mosaic-item">
+                    <div class="mosaic-market">Industria Farmacéutica</div>
+                    <div class="product-item">Lactosa Anhidra</div>
+                    <div class="product-item">Ácido Cítrico Monohidratado</div>
+                </div>
+
+                <div class="mosaic-item">
+                    <div class="mosaic-market">Cosmética</div>
+                    <div class="product-item">Propilenglicol</div>
+                    <div class="product-item">Trietanolamina</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navegación entre opciones
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const optionSections = document.querySelectorAll('.option-section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const target = this.getAttribute('data-target');
+
+                    // Actualizar botones activos
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Mostrar sección correspondiente
+                    optionSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === target) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Funcionalidad para pestañas
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const market = this.getAttribute('data-market');
+
+                    // Actualizar botones activos
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Mostrar contenido correspondiente
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === market) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Funcionalidad para lista desplegable
+            const marketSelect = document.querySelector('.market-select');
+            const productList = document.querySelector('.products-list');
+
+            // Datos de productos por mercado
+            const productsData = {
+                farmaceutico: {
+                    title: "Productos para Industria Farmacéutica",
+                    products: [
+                        "Paracetamol - USP Grade",
+                        "Ibuprofeno - Grado Farmacéutico",
+                        "Ácido Acetilsalicílico",
+                        "Lactosa Anhidra",
+                        "Ácido Cítrico Monohidratado"
+                    ]
+                },
+                cosmetica: {
+                    title: "Productos para Cosmética",
+                    products: [
+                        "Glicerina USP",
+                        "Alcohol Cetílico",
+                        "Aceite de Silicona",
+                        "Propilenglicol",
+                        "Trietanolamina"
+                    ]
+                },
+                alimenticio: {
+                    title: "Productos para Industria Alimenticia",
+                    products: [
+                        "Ácido Cítrico Anhidro",
+                        "Benzoato de Sodio",
+                        "Sorbato de Potasio",
+                        "Ácido Ascórbico",
+                        "Goma Xantana"
+                    ]
+                },
+                agricola: {
+                    title: "Productos para Agricultura",
+                    products: [
+                        "Urea Técnica",
+                        "Sulfato de Amonio",
+                        "Nitrato de Potasio",
+                        "Fosfato Diamónico",
+                        "Glifosato"
+                    ]
+                }
+            };
+
+            marketSelect.addEventListener('change', function () {
+                const market = this.value;
+                const data = productsData[market];
+
+                // Actualizar la lista de productos
+                productList.innerHTML = `
+                    <h3>${data.title}</h3>
+                    <ul>
+                        ${data.products.map(product => `<li class="product-item">${product}</li>`).join('')}
+                    </ul>
+                `;
+            });
+        });
+    </script>
+</body>
+
+</html>

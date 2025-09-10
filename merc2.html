@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Químicos por Mercado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            padding: 30px 0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-button {
+            background: linear-gradient(to right, #4a6fa5, #2c3e50);
+            color: white;
+            font-weight: 600;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px !important;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: linear-gradient(to right, #2980b9, #2c3e50);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transition: transform 0.5s ease;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            transform: rotate(-180deg);
+        }
+
+        .accordion-body {
+            background-color: #ffffff;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+
+        .product-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-icon {
+            width: 36px;
+            height: 36px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #1976d2;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-name {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        .market-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-left: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        .chemical-theme {
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header text-center">
+            <h1><i class="fas fa-flask chemical-theme me-2"></i> Productos Químicos</h1>
+            <p class="lead">Agrupados por mercado de aplicación</p>
+        </div>
+
+        <div class="accordion" id="chemicalAccordion">
+            <!-- Mercado Farmacéutico -->
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="pharmaHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#pharmaCollapse" aria-expanded="true" aria-controls="pharmaCollapse">
+                        <i class="fas fa-pills me-2"></i> Industria Farmacéutica
+                    </button>
+                </h2>
+                <div id="pharmaCollapse" class="accordion-collapse collapse show" aria-labelledby="pharmaHeading"
+                    data-bs-parent="#chemicalAccordion">
+                    <div class="accordion-body">
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-capsules"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Paracetamol <span class="market-badge">USP Grade</span></div>
+                                <div class="product-desc">Analgésico y antipirético de alta pureza</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-tablets"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Ibuprofeno <span class="market-badge">Grado
+                                        Farmacéutico</span></div>
+                                <div class="product-desc">Antiinflamatorio no esteroideo</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-mortar-pestle"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Ácido Acetilsalicílico</div>
+                                <div class="product-desc">Principio activo para anticoagulantes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mercado Cosmética -->
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="cosmeticHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#cosmeticCollapse" aria-expanded="false" aria-controls="cosmeticCollapse">
+                        <i class="fas fa-spa me-2"></i> Cosmética
+                    </button>
+                </h2>
+                <div id="cosmeticCollapse" class="accordion-collapse collapse" aria-labelledby="cosmeticHeading"
+                    data-bs-parent="#chemicalAccordion">
+                    <div class="accordion-body">
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Glicerina <span class="market-badge">USP</span></div>
+                                <div class="product-desc">Humectante para productos de cuidado de la piel</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-soap"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Alcohol Cetílico</div>
+                                <div class="product-desc">Emoliente para cremas y lociones</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Aceite de Silicona</div>
+                                <div class="product-desc">Para productos capilares y de cuidado de la piel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mercado Alimenticio -->
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="foodHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#foodCollapse" aria-expanded="false" aria-controls="foodCollapse">
+                        <i class="fas fa-utensils me-2"></i> Industria Alimenticia
+                    </button>
+                </h2>
+                <div id="foodCollapse" class="accordion-collapse collapse" aria-labelledby="foodHeading"
+                    data-bs-parent="#chemicalAccordion">
+                    <div class="accordion-body">
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-lemon"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Ácido Cítrico <span class="market-badge">Anhidro</span></div>
+                                <div class="product-desc">Acidulante y conservante natural</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Benzoato de Sodio</div>
+                                <div class="product-desc">Conservante para alimentos y bebidas</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Sorbato de Potasio</div>
+                                <div class="product-desc">Inhibidor de moho y levaduras</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mercado Agrícola -->
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="agricultureHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#agricultureCollapse" aria-expanded="false" aria-controls="agricultureCollapse">
+                        <i class="fas fa-tractor me-2"></i> Agricultura
+                    </button>
+                </h2>
+                <div id="agricultureCollapse" class="accordion-collapse collapse" aria-labelledby="agricultureHeading"
+                    data-bs-parent="#chemicalAccordion">
+                    <div class="accordion-body">
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Urea <span class="market-badge">Técnica</span></div>
+                                <div class="product-desc">Fertilizante nitrogenado de alto rendimiento</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Sulfato de Amonio</div>
+                                <div class="product-desc">Fertilizante para suelos alcalinos</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div class="product-details">
+                                <div class="product-name">Nitrato de Potasio</div>
+                                <div class="product-desc">Fuente de nitrógeno y potasio para cultivos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2023 Catálogo de Productos Químicos. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para mejorar la experiencia del acordeón
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Cierra los demás acordeones al abrir uno nuevo (comportamiento de acordeón)
+                    if (!this.classList.contains('collapsed')) {
+                        const allCollapses = document.querySelectorAll('.accordion-collapse.show');
+                        allCollapses.forEach(collapse => {
+                            if (collapse.id !== this.getAttribute('data-bs-target').substring(1)) {
+                                const bsCollapse = new bootstrap.Collapse(collapse, {
+                                    toggle: false
+                                });
+                                bsCollapse.hide();
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Efecto de scroll suave al abrir un acordeón
+            document.getElementById('chemicalAccordion').addEventListener('shown.bs.collapse', function (e) {
+                const targetElement = e.target;
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
