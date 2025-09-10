@@ -745,6 +745,13 @@ h6,
 }
 
 
+/*--------------------------------------------------------------
+#   Productos Section
+--------------------------------------------------------------*/
+
+#productos ul>li {
+    color: var(--accent-color)
+}
 
 @media (max-width: 575px) {
     .container-header {
