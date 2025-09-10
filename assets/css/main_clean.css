@@ -297,6 +297,14 @@ textarea {
     overflow: hidden;
 }
 
+#hero-prod {
+    background: url(../images/hero-productos.png);
+    background-position: center center;
+    min-height: 580px;
+    position: relative;
+    overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -322,15 +330,22 @@ textarea {
 
 #hero .container-fluid,
 #hero-us .container-fluid,
+#hero-prod .container-fluid,
 #hero .container,
 #hero-us .container,
+#hero-prod .container,
 #hero .justify-content-center,
 #hero-us .justify-content-center,
+#hero-prod .justify-content-center,
 #hero .col-xl-10,
 #hero-us .col-xl-10,
+#hero-prod .col-xl-10,
 #hero .row,
 #hero-us .row,
-#hero .col-xl-8 #hero-us .col-xl-8 {
+#hero-prod .row,
+#hero .col-xl-8,
+#hero-us .col-xl-8,
+#hero-prod .col-xl-8 {
     position: relative;
     z-index: 2;
     /* Asegura que el contenido esté por encima del overlay */
@@ -338,19 +353,23 @@ textarea {
 
 #hero h1,
 #hero-us h1,
+#hero-prod h1,
 #hero h2,
-#hero-us h2 {
+#hero-us h2,
+#hero-prod h2 {
     color: var(--background-color);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 #hero h1,
-#hero-us h1 {
+#hero-us h1,
+#hero-prod h1 {
     font-size: 46px;
 }
 
 #hero p,
-#hero-us p {
+#hero-us p,
+#hero-prod p {
     color: var(--background-color);
     font-size: 20px;
     padding-top: 1.5rem;
@@ -738,6 +757,14 @@ h6,
 }
 
 @media (max-width: 768px) {
+
+    #hero-prod {
+        background: url(../images/hero-productos-mobile.png);
+        background-position: center center;
+        min-height: 580px;
+        position: relative;
+        overflow: hidden;
+    }
 
     .card-product-horizontal .img-container {
         flex: 0 0 0;
