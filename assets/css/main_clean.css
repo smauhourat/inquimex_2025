@@ -3,6 +3,7 @@
     --accent-color: #0235d2;
     --secondary-color: #122337;
     --neutral-color: #010102;
+    --highlight-color: #aee8ff;
     --swiper-navigation-size: 24px !important;
 }
 
@@ -147,8 +148,12 @@ textarea {
 }
 
 .top-bar a:hover {
-    color: color-mix(in srgb, var(--background-color), transparent 25%);
-    text-decoration: none;
+    /* color: color-mix(in srgb, var(--background-color), transparent 25%); */
+    color: var(--highlight-color) !important;
+}
+
+.top-bar-row a:hover {
+    color: var(--highlight-color) !important;
 }
 
 /*--------------------------------------------------------------
@@ -725,6 +730,25 @@ h6,
     font-size: 16px;
     font-weight: 600;
     color: #fffff8;
+}
+
+#footer a {
+    text-decoration: none;
+    color: var(--background-color);
+}
+
+#footer a:hover {
+    color: var(--highlight-color);
+}
+
+#footer-last a {
+    text-decoration: none;
+    color: #a8a6a6;
+    font-weight: 700;
+}
+
+#footer-last a:hover {
+    color: var(--highlight-color);
 }
 
 .cert-iso-container {
