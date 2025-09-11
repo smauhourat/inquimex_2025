@@ -181,6 +181,11 @@ textarea {
     padding: 0;
 }
 
+.navmenu a,
+.navmenu li {
+    color: var(--background-color);
+}
+
 .navmenu a:hover,
 .navmenu .active>a,
 .navmenu li:hover>a {
@@ -201,7 +206,7 @@ textarea {
 
 .navmenu a,
 .navmenu a:focus {
-    color: #aee8ff;
+    /* color: #aee8ff; */
     padding: 18px 12px;
     font-size: 1.2rem;
     /* font-family: var(--nav-font); */
@@ -864,6 +869,52 @@ h6,
     color: var(--accent-color);
 }
 
+
+/*--------------------------------------------------------------
+#   WhatsApp
+--------------------------------------------------------------*/
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+
+
 @media (max-width: 575px) {
     .container-header {
         height: 90px;
@@ -875,6 +926,14 @@ h6,
 }
 
 @media (max-width: 768px) {
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
 
     #hero-prod {
         background: url(../images/hero-productos-mobile.png);
