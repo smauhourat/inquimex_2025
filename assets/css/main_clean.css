@@ -59,6 +59,12 @@ textarea {
     margin-top: 30px;
     border-style: none;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .5);
+
+}
+
+.button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 .button a {
@@ -927,20 +933,21 @@ h6,
 
 @media (max-width: 768px) {
 
+    .accordion-header i {
+        font-size: 30px;
+    }
+
+    .accordion-button-custom {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
     .whatsapp-float {
         width: 50px;
         height: 50px;
         bottom: 20px;
         right: 20px;
         font-size: 24px;
-    }
-
-    #hero-prod {
-        background: url(../images/hero-productos-mobile.png);
-        background-position: center center;
-        min-height: 580px;
-        position: relative;
-        overflow: hidden;
     }
 
     .card-product-horizontal .img-container {
@@ -1051,6 +1058,22 @@ h6,
 
     #hero {
         background: url(../images/inicio_tablet-07.jpg);
+        background-position: center center;
+        min-height: 580px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #hero-prod {
+        background: url(../images/hero-productos-mobile.png);
+        background-position: center center;
+        min-height: 580px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #hero-merc {
+        background: url(../images/hero-mercados-mobile.png);
         background-position: center center;
         min-height: 580px;
         position: relative;
