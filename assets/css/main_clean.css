@@ -824,10 +824,44 @@ h6,
     margin-left: 70px;
     line-height: 24px;
     font-size: 14px;
+
 }
 
+/*--------------------------------------------------------------
+#   Accordion
+--------------------------------------------------------------*/
 .accordion-collapse {
     transition: all 0.3s !important;
+}
+
+.accordion-header {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    /* background: #252525; */
+    background: var(--accent-color);
+    transition: 0.3s;
+}
+
+.accordion-header i {
+    float: left;
+    color: var(--background-color);
+    box-shadow: inset;
+    font-size: 40px;
+}
+
+.accordion-button-custom {
+    background: var(--accent-color);
+    border: none;
+    color: var(--background-color);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'URBANE LIGHT';
+}
+
+.accordion-body .row div {
+    padding-bottom: 12px;
+    color: var(--accent-color);
 }
 
 @media (max-width: 575px) {
