@@ -957,6 +957,15 @@ h6,
 
 @media (max-width: 768px) {
 
+
+    .top-bar .top-social-icon .social-icon-row {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px;
+        justify-content: center;
+
+    }
+
     .accordion-header i {
         font-size: 30px;
     }
