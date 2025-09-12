@@ -335,7 +335,7 @@ textarea {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-    background: url(../images/inicio_web-04.1-04.jpg);
+    background: url(../images/hero-home.jpg);
     background-position: center center;
     min-height: 580px;
     position: relative;
@@ -1090,7 +1090,7 @@ h6,
     }
 
     #hero {
-        background: url(../images/inicio_tablet-07.jpg);
+        background: url(../images/hero-home-mobile.jpg);
         background-position: center center;
         min-height: 580px;
         position: relative;
