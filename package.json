@@ -1,0 +1,13 @@
+{
+  "name": "inquimex_2025",
+  "version": "1.0.0",
+  "description": "WebSite Inquimex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copyassets": "xcopy assets dist\\assets /s /e /q /y /i",
+    "build": "npm run copyassets"
+  },
+  "author": "",
+  "license": "ISC"
+}
