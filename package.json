@@ -1,13 +1,18 @@
 {
   "name": "inquimex_2025",
   "version": "1.0.0",
+  "type": "module",
   "description": "WebSite Inquimex",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanassets": "rimraf dist",
     "copyassets": "xcopy assets dist\\assets /s /e /q /y /i",
-    "build": "npm run copyassets"
+    "build": "npm run cleanassets && npm run copyassets && node copypages"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cpy": "^12.0.1"
+  }
 }
