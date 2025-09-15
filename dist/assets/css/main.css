@@ -308,7 +308,7 @@ textarea {
 # Hero Nosotros Section
 --------------------------------------------------------------*/
 #hero-us {
-    background: url(../images/hero-nosotros.jpg);
+    background: url(../images/hero-nosotros.webp);
     background-position: center center;
     min-height: 580px;
     position: relative;
@@ -316,7 +316,7 @@ textarea {
 }
 
 #hero-prod {
-    background: url(../images/hero-productos.png);
+    background: url(../images/hero-productos.webp);
     background-position: center center;
     min-height: 580px;
     position: relative;
@@ -324,7 +324,7 @@ textarea {
 }
 
 #hero-merc {
-    background: url(../images/hero-mercados.png);
+    background: url(../images/hero-mercados.webp);
     background-position: center center;
     min-height: 580px;
     position: relative;
@@ -335,7 +335,7 @@ textarea {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-    background: url(../images/inicio_web-04.1-04.jpg);
+    background: url(../images/hero-home.webp);
     background-position: center center;
     min-height: 580px;
     position: relative;
@@ -600,7 +600,7 @@ h6,
 --------------------------------------------------------------*/
 
 #familiar {
-    background-image: url(../images/nuestra-empresa-nueva-banner.jpg);
+    background-image: url(../images/nuestra-empresa-nueva-banner.webp);
     padding: 0;
     color: #fff;
     position: relative;
@@ -623,7 +623,7 @@ h6,
 --------------------------------------------------------------*/
 
 #invertir {
-    background-image: url(../images/invertimos-solo-05-05.jpg);
+    background-image: url(../images/invertimos-solo-05-05.webp);
     padding: 0;
     color: #fff;
     position: relative;
@@ -971,7 +971,7 @@ h6,
     }
 
     .accordion-button-custom {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
     }
 
@@ -1090,7 +1090,7 @@ h6,
     }
 
     #hero {
-        background: url(../images/inicio_tablet-07.jpg);
+        background: url(../images/hero-home-mobile.webp);
         background-position: center center;
         min-height: 580px;
         position: relative;
@@ -1098,7 +1098,7 @@ h6,
     }
 
     #hero-prod {
-        background: url(../images/hero-productos-mobile.png);
+        background: url(../images/hero-productos-mobile.webp);
         background-position: center center;
         min-height: 580px;
         position: relative;
@@ -1106,7 +1106,7 @@ h6,
     }
 
     #hero-merc {
-        background: url(../images/hero-mercados-mobile.png);
+        background: url(../images/hero-mercados-mobile.webp);
         background-position: center center;
         min-height: 580px;
         position: relative;
