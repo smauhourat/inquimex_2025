@@ -732,6 +732,16 @@ h6,
     color: #fffff8;
 }
 
+.footer-title {
+    font-family: URBANE LIGHT, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fffff8;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
 #footer a {
     text-decoration: none;
     color: var(--background-color);
@@ -1122,6 +1132,10 @@ h6,
     }
 
     .footer h6 {
+        padding-top: 30px;
+    }
+
+    .footer-title {
         padding-top: 30px;
     }
 
