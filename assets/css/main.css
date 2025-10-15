@@ -969,7 +969,13 @@ h6,
     }
 }
 
+    .mobile-hide-cust {
+        display: inline-block;
+    }
 
+    .mobile-show-cust {
+        display: none;
+    }
 
 @media (max-width: 575px) {
     .container-header {
@@ -979,6 +985,14 @@ h6,
 
     .logo {
         width: 130px;
+    }
+
+    .mobile-hide-cust {
+        display: none;
+    }
+
+    .mobile-show-cust {
+        display: inline-block;
     }
 }
 
