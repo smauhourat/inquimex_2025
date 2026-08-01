@@ -1,5 +1,5 @@
 :root {
-    --background-color: #fffff8;
+    --background-color: #fffff9;
     --accent-color: #0235d2;
     --secondary-color: #122337;
     --neutral-color: #010102;
@@ -518,10 +518,18 @@ h6,
 }
 
 .anniversary-img {
-        background: var(--background-color);
+    background: var(--background-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutus-img {
+    background: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
