@@ -25,21 +25,13 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-    <!-- Font -->
-    <link href='https://fonts.googleapis.com/css?family=DM+Sans:400,500,600,700&amp;display=fallback'
-        rel='stylesheet' type='text/css' />
+    <!-- Fonts (self-hosted) -->
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-sans-latin.woff2" crossorigin>
+    <link href='assets/css/dm-sans.css' rel='stylesheet' type='text/css' />
 
     <link href='assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
-    <!-- Option 1: Include in HTML -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <!-- Vendors -->
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -97,7 +89,7 @@
             <div class="container navigation">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo-grande-768x189.webp" alt="Logo Inquimex" class="img-fluid">
+                        <img src="assets/images/logo-grande-768x189.webp" alt="Logo Inquimex" class="img-fluid" width="768" height="189">
                         <!-- <img src="assets/images/logo-70.webp" alt="Logo Inquimex" class="img-fluid"> -->
                     </a>
                 </div>
@@ -110,7 +102,10 @@
                             <li><a href="mercados.html">Mercados</a></li>
                             <li class="active"><a href="contacto.html">Contacto</a></li>
                         </ul>
-                        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                        <i class="mobile-nav-toggle d-xl-none">
+                            <svg class="icon-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
+                            <svg class="icon-close d-none" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+                        </i>
                     </nav>
                 </div>
             </div>
@@ -129,7 +124,7 @@
                                     </h1>
                                     <p data-aos="fade-up" data-aos-delay="100">Contanos qué necesitás y te
                                         respondemos a la brevedad.</p>
-                                    <img data-aos="fade-up" data-aos-delay="100" class="pt-3" width="126px"
+                                    <img data-aos="fade-up" data-aos-delay="100" class="pt-3" width="126" height="32"
                                         src="assets/images/miscelanea-3.webp" alt="miscelanea">
                                 </div>
                             </div>
@@ -152,21 +147,21 @@
                             va a poner en contacto con vos.</p>
                         <ul class="contact-info-list mt-4">
                             <li>
-                                <i class="bi bi-geo-alt-fill"></i>
+                                <i><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg></i>
                                 <div>
                                     <span>Nuestra Oficina</span>
                                     Migueletes 1231 2° Piso Oficina 202 CPA (C1426BUQ), CABA
                                 </div>
                             </li>
                             <li>
-                                <i class="bi bi-telephone-fill"></i>
+                                <i><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg></i>
                                 <div>
                                     <span>Administración</span>
                                     +54 11 5220-9156
                                 </div>
                             </li>
                             <li>
-                                <i class="bi bi-envelope-fill"></i>
+                                <i><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg></i>
                                 <div>
                                     <span>Email</span>
                                     info@inquimex.com.ar
@@ -275,14 +270,14 @@
 
                     Horacio Percaz<br>
                     <a href="https://wa.me/541141905590" target="_blank">
-                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp"
+                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp" width="20" height="20"
                             style="width: 20px; vertical-align: middle; margin-right: 5px;" class="lazyloaded"
                             data-ll-status="loaded"> +54 11 4190-5590</a><br>
                     <a href="mailto:hpercaz@inquimex.com.ar" target="_blank" rel="noopener">
                         hpercaz@inquimex.com.ar</a><br><br>
                     Valeria Trotta<br>
                     <a href="https://wa.me/541169150940" target="_blank">
-                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp"
+                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp" width="20" height="20"
                             style="width: 20px; vertical-align: middle; margin-right: 5px;" class="lazyloaded"
                             data-ll-status="loaded"> +54 11 6915-0940</a><br>
                     <a href="mailto:vtrotta@inquimex.com.ar" target="_blank" rel="noopener">
@@ -304,17 +299,15 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/js/contacto.js"></script>
 
     <!-- Icono de WhatsApp flotante -->
     <a href="https://wa.me/5491152209156?text=Hola,%20me%20gustaria%20pedir%20mas%20informacion" class="whatsapp-float"
         target="_blank">
-        <img src="assets/images/WhatsApp.svg" alt="WhatsApp" />
+        <img src="assets/images/WhatsApp.svg" alt="WhatsApp" width="32" height="32" />
     </a>
 </body>
 

@@ -7,5 +7,6 @@ import cpy from 'cpy';
     await cpy('mercados.html', 'dist');
     await cpy('nosotros.html', 'dist');
     await cpy('contacto.html', 'dist');
+    await cpy('.htaccess', 'dist');
 
 })();

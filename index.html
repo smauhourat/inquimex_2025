@@ -8,7 +8,6 @@
     <meta name="keywords" content="químicos, agroquímicos, inquimex, urea" />
     <meta name="description"
         content="Empresa dedicada a la provisión de Químicos Industriales con 70 años distribuyendo, por lo tanto, ofrecemos garantía de calidad y confianza." />
-    <!-- <link rel="preconnect" href="https://cdn.jsdelivr.net"> -->
     <link rel="canonical" href="https://inquimex.com.ar/" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:type" content="website" />
@@ -26,22 +25,13 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-    <!-- Font -->
-    <link href='https://fonts.googleapis.com/css?family=DM+Sans:400,500,600,700&amp;display=fallback'
-        rel='stylesheet' type='text/css' />
+    <!-- Fonts (self-hosted) -->
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-sans-latin.woff2" crossorigin>
+    <link href='assets/css/dm-sans.css' rel='stylesheet' type='text/css' />
 
     <link href='assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!-- <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    </noscript> -->
-
-    <!-- Option 1: Include in HTML -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
     <!-- Vendors -->
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -103,7 +93,7 @@
             <div class="container navigation">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo-grande-768x189.webp" alt="Logo Inquimex" class="img-fluid">
+                        <img src="assets/images/logo-grande-768x189.webp" alt="Logo Inquimex" class="img-fluid" width="768" height="189">
                         <!-- <img src="assets/images/logo-70.webp" alt="Logo Inquimex" class="img-fluid"> -->
                     </a>
                 </div>
@@ -116,7 +106,10 @@
                             <li><a href="mercados.html">Mercados</a></li>
                             <li><a href="contacto.html">Contacto</a></li>
                         </ul>
-                        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                        <i class="mobile-nav-toggle d-xl-none">
+                            <svg class="icon-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
+                            <svg class="icon-close d-none" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+                        </i>
                     </nav>
                 </div>
             </div>
@@ -128,7 +121,7 @@
             <div class="container">
                 <div class="row justify-content-center" data-aos="zoom-out" data-aos-delay="50">
                     <div class="section-title">
-                        <img class="pb-4" width="126px" src="assets/images/miscelanea-3.webp" alt="miscelanea">
+                        <img class="pb-4" width="126" height="32" src="assets/images/miscelanea-3.webp" alt="miscelanea">
                         <h2>¡70 Años de Historia Compartida!</h2>
                     </div>
                 </div>
@@ -138,14 +131,14 @@
                             <div class="col-lg-6 mobile-hide-cust" style="min-height: 250px;">
                                 <div class="position-relative h-100 slider-pic anniversary-img">
                                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" srcset=""
+                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" width="1024" height="650"
                                         alt="planta">
                                 </div>
                             </div>
                             <div class="col-lg-6 mobile-show-cust" style="min-height: 150px; border: solid 1px #fff;">
                                 <div class="position-relative h-100 slider-pic anniversary-img">
                                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" srcset=""
+                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" width="1024" height="650"
                                         alt="planta">
                                 </div>
                             </div>
@@ -174,7 +167,7 @@
                             <div class="col-xl-8">
                                 <h1 data-aos="fade-up" data-aos-delay="10">Tenemos la Solución</h1>
                                 <h2 data-aos="fade-up" data-aos-delay="50">que estás buscando</h2>
-                                <img data-aos="fade-up" data-aos-delay="100" class="pt-3" width="126px"
+                                <img data-aos="fade-up" data-aos-delay="100" class="pt-3" width="126" height="32"
                                     src="assets/images/miscelanea-3.webp" alt="miscelanea">
                                 <p data-aos="fade-up" data-aos-delay="100">Empresa dedicada a la provisión de Químicos
                                     Industriales
@@ -204,7 +197,7 @@
             <div class="container">
                 <div class="row justify-content-center" data-aos="zoom-out" data-aos-delay="50">
                     <div class="section-title">
-                        <img class="pb-4" width="126px" src="assets/images/miscelanea-3.webp" alt="miscelanea">
+                        <img class="pb-4" width="126" height="32" src="assets/images/miscelanea-3.webp" alt="miscelanea">
                         <h2>Nuestra Empresa</h2>
                     </div>
                 </div>
@@ -214,7 +207,7 @@
                             <div class="col-lg-6 mobile-hide" style="min-height: 350px;">
                                 <div class="position-relative h-100 slider-pic aboutus-img">
                                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                        src="assets/images/planta-6-768x547.webp" style="object-fit: cover;" srcset=""
+                                        src="assets/images/planta-6-768x547.webp" style="object-fit: cover;" width="768" height="547"
                                         alt="planta">
                                 </div>
                             </div>
@@ -256,14 +249,14 @@
                             <div class="col-lg-6 mobile-hide-cust" style="min-height: 250px;">
                                 <div class="position-relative h-100 slider-pic anniversary-img">
                                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" srcset=""
+                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" width="1024" height="650"
                                         alt="planta">
                                 </div>
                             </div>
                             <div class="col-lg-6 mobile-show-cust" style="min-height: 150px; border: solid 1px #fff;">
                                 <div class="position-relative h-100 slider-pic anniversary-img">
                                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" srcset=""
+                                        src="assets/images/hero-aniversario.webp" style="object-fit: cover;" width="1024" height="650"
                                         alt="planta">
                                 </div>
                             </div>
@@ -331,7 +324,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="section-title">
-                        <img class="pb-4" width="126px" src="assets/images/miscelanea-3.webp" alt="miscelanea">
+                        <img class="pb-4" width="126" height="32" src="assets/images/miscelanea-3.webp" alt="miscelanea">
                         <h2>Novedades de Productos</h2>
                         <p class="section-subtitle">Ofrecemos un porfolio de productos que incluye soluciones para
                             distintas
@@ -348,7 +341,7 @@
                                         <h2 class="card-product-title">Proaire ®</h2>
                                     </div>
                                     <div class="card-product-body">
-                                        <img src="assets/images/tribex2-768x547.webp" alt="Proaire"
+                                        <img src="assets/images/tribex2-768x547.webp" alt="Proaire" width="768" height="547"
                                             style="width:100%; height:auto; margin-bottom:15px; border-radius:8px;">
                                         <p class="card-product-description">ProAire es un fluido elaborado a base de urea de alta pureza que se utiliza en sistemas de Reducción Catalítica Selectiva (SCR), permitiendo disminuir significativamente las emisiones de óxidos de nitrógeno (NOx) generadas por vehículos diésel.</p>
                                         <div class="card-product-distributor">
@@ -362,7 +355,7 @@
                                         <h2 class="card-product-title">Poliuretanos</h2>
                                     </div>
                                     <div class="card-product-body">
-                                        <img src="assets/images/pol.webp" alt="Poliuretanos"
+                                        <img src="assets/images/pol.webp" alt="Poliuretanos" width="750" height="500"
                                             style="width:100%; height:auto; margin-bottom:15px; border-radius:8px;">
                                         <p class="card-product-description">Inquimex anuncia el regreso de su línea completa de materias primas para la fabricación de espuma flexible de poliuretano, un mercado en el que históricamente ha sido un proveedor estratégico para la industria del colchón, mueble y confort</p>
                                         <div class="card-product-distributor">
@@ -376,7 +369,7 @@
                                         <h2 class="card-product-title">TRIBEX®</h2>
                                     </div>
                                     <div class="card-product-body">
-                                        <img src="assets/images/tribex-768x547.webp" alt="TRIBEX®"
+                                        <img src="assets/images/tribex-768x547.webp" alt="TRIBEX®" width="768" height="547"
                                             style="width:100%; height:auto; margin-bottom:15px; border-radius:8px;">
                                         <p class="card-product-description">Tribex ERD es un novedoso lubricante sólido
                                             producido
@@ -418,7 +411,7 @@
                     <div class="section-title-white text-center">
                         <h2>Una empresa familiar</h2>
                         <p class="pt-5 section-subtitle-whiteXXX">
-                            <img src="assets/images/iso-blanco.webp" width="80px" alt="logo-iso">
+                            <img src="assets/images/iso-blanco.webp" width="80" height="80" alt="logo-iso">
                         </p>
                     </div>
                 </div>
@@ -433,7 +426,7 @@
                 <div class="col-lg-4 col-md-12 col-12">
                     <div class="count-box">
                         <img src="assets/images/profertil.webp" class="banner-proveedor-img img-fluid rounded"
-                            alt="Profertil">
+                            alt="Profertil" width="425" height="336">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-12">
@@ -450,7 +443,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="section-title">
-                        <img class="pb-4" width="126px" src="assets/images/miscelanea-3.webp" alt="miscelanea">
+                        <img class="pb-4" width="126" height="32" src="assets/images/miscelanea-3.webp" alt="miscelanea">
                         <h2>Proveedores y Representadas</h2>
                     </div>
                 </div>
@@ -464,61 +457,61 @@
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/1-1-150x150.webp" class="img-fluid"
-                                                    alt="Logo Alpat" />
+                                                    alt="Logo Alpat" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/2-1-150x150.webp" class="img-fluid"
-                                                    alt="Logo Drilling" />
+                                                    alt="Logo Drilling" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/3-150x150.webp" class="img-fluid"
-                                                    alt="Logo Profertil" />
+                                                    alt="Logo Profertil" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/4-150x150.webp" class="img-fluid"
-                                                    alt="Logo Basf" />
+                                                    alt="Logo Basf" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/5-150x150.webp" class="img-fluid"
-                                                    alt="Logo Evonik" />
+                                                    alt="Logo Evonik" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/6-150x150.webp" class="img-fluid"
-                                                    alt="Logo Nouryon" />
+                                                    alt="Logo Nouryon" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/7-150x150.webp" class="img-fluid"
-                                                    alt="Logo Unipar" />
+                                                    alt="Logo Unipar" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/8-150x150.webp" class="img-fluid"
-                                                    alt="Logo Concentrol" />
+                                                    alt="Logo Concentrol" width="300" height="255" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/9-150x150.webp" class="img-fluid"
-                                                    alt="Logo Inov" />
+                                                    alt="Logo Inov" width="150" height="150" />
                                             </figure>
                                         </div>
                                         <div class="swiper-slide">
                                             <figure>
                                                 <img src="assets/images/10-150x150.webp" class="img-fluid"
-                                                    alt="Logo Mayrun Chemical" />
+                                                    alt="Logo Mayrun Chemical" width="400" height="350" />
                                             </figure>
                                         </div>
                                     </div>
@@ -541,7 +534,7 @@
                     <div class="section-cta-white">
                         <div data-aos="zoom-in" data-aos-delay="100">
                             <p class="section-cta-subtitle-white">
-                                <img src="assets/images/iso-blanco.webp" width="80px" alt="logo-iso">
+                                <img src="assets/images/iso-blanco.webp" width="80" height="80" alt="logo-iso">
                             </p>
                             <h2 class="mb-4">El socio estratégico ideal para tu empresa</h2>
                             <h3 class="mb-4">¡Contáctanos ahora! </h3>
@@ -600,14 +593,14 @@
 
                     Horacio Percaz<br>
                     <a href="https://wa.me/541141905590" target="_blank">
-                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp"
+                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp" width="20" height="20"
                             style="width: 20px; vertical-align: middle; margin-right: 5px;" class="lazyloaded"
                             data-ll-status="loaded"> +54 11 4190-5590</a><br>
                     <a href="mailto:hpercaz@inquimex.com.ar" target="_blank" rel="noopener">
                         hpercaz@inquimex.com.ar</a><br><br>
                     Valeria Trotta<br>
                     <a href="https://wa.me/541169150940" target="_blank">
-                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp"
+                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp" width="20" height="20"
                             style="width: 20px; vertical-align: middle; margin-right: 5px;" class="lazyloaded"
                             data-ll-status="loaded"> +54 11 6915-0940</a><br>
                     <a href="mailto:vtrotta@inquimex.com.ar" target="_blank" rel="noopener">
@@ -632,9 +625,7 @@
 
 
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
 
     <script>
         const swiper = new Swiper('.mySwiper', {
@@ -690,12 +681,12 @@
         });
     </script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Icono de WhatsApp flotante -->
     <a href="https://wa.me/5491152209156?text=Hola,%20me%20gustaria%20pedir%20mas%20informacion" class="whatsapp-float"
         target="_blank">
-        <img src="assets/images/WhatsApp.svg" alt="WhatsApp" />
+        <img src="assets/images/WhatsApp.svg" alt="WhatsApp" width="32" height="32" />
     </a>
 </body>
 

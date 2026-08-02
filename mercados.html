@@ -25,20 +25,15 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-    <!-- Font -->
-    <link href='https://fonts.googleapis.com/css?family=DM+Sans:400,500,600,700&amp;display=fallback'
-        rel='stylesheet' type='text/css' />
+    <!-- Fonts (self-hosted) -->
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-sans-latin.woff2" crossorigin>
+    <link href='assets/css/dm-sans.css' rel='stylesheet' type='text/css' />
 
     <link href='assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
-    <!-- Option 1: Include in HTML -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Vendors -->
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
 </head>
 
@@ -97,7 +92,7 @@
             <div class="container navigation">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo-grande-768x189.webp" alt="Logo Inquimex" class="img-fluid">
+                        <img src="assets/images/logo-grande-768x189.webp" alt="Logo Inquimex" class="img-fluid" width="768" height="189">
                         <!-- <img src="assets/images/logo-70.webp" alt="Logo Inquimex" class="img-fluid"> -->
                     </a>
                 </div>
@@ -110,7 +105,10 @@
                             <li class="active"><a href="mercados.html">Mercados</a></li>
                             <li><a href="contacto.html">Contacto</a></li>
                         </ul>
-                        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                        <i class="mobile-nav-toggle d-xl-none">
+                            <svg class="icon-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
+                            <svg class="icon-close d-none" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+                        </i>
                     </nav>
                 </div>
             </div>
@@ -127,7 +125,7 @@
                                 <div class="hero-content">
                                     <h1 data-aos="fade-up" data-aos-delay="10">Mercados Destacados
                                     </h1>
-                                    <img data-aos="fade-up" data-aos-delay="100" class="pt-3" width="126px"
+                                    <img data-aos="fade-up" data-aos-delay="100" class="pt-3" width="126" height="32"
                                         src="assets/images/miscelanea-3.webp" alt="miscelanea">
 
                                 </div>
@@ -144,7 +142,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="section-title">
-                        <img class="pb-4" width="126px" src="assets/images/miscelanea-3.webp" alt="miscelanea">
+                        <img class="pb-4" width="126" height="32" src="assets/images/miscelanea-3.webp" alt="miscelanea">
                         <h2>Nuestros Mercados</h2>
                     </div>
                 </div>
@@ -523,7 +521,7 @@
                     <div class="section-cta-white">
                         <div data-aos="zoom-in" data-aos-delay="100">
                             <p class="section-cta-subtitle-white">
-                                <img src="assets/images/iso-blanco.webp" width="80px" alt="logo-iso">
+                                <img src="assets/images/iso-blanco.webp" width="80" height="80" alt="logo-iso">
                             </p>
                             <h2 class="mb-4">El socio estratégico ideal para tu empresa</h2>
                             <h3 class="mb-4">¡Contáctanos ahora! </h3>
@@ -581,14 +579,14 @@
 
                     Horacio Percaz<br>
                     <a href="https://wa.me/541141905590" target="_blank">
-                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp"
+                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp" width="20" height="20"
                             style="width: 20px; vertical-align: middle; margin-right: 5px;" class="lazyloaded"
                             data-ll-status="loaded"> +54 11 4190-5590</a><br>
                     <a href="mailto:hpercaz@inquimex.com.ar" target="_blank" rel="noopener">
                         hpercaz@inquimex.com.ar</a><br><br>
                     Valeria Trotta<br>
                     <a href="https://wa.me/541169150940" target="_blank">
-                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp"
+                        <img decoding="async" src="assets/images/WhatsApp.svg" alt="WhatsApp" width="20" height="20"
                             style="width: 20px; vertical-align: middle; margin-right: 5px;" class="lazyloaded"
                             data-ll-status="loaded"> +54 11 6915-0940</a><br>
                     <a href="mailto:vtrotta@inquimex.com.ar" target="_blank" rel="noopener">
@@ -610,16 +608,14 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
 
     <!-- Icono de WhatsApp flotante -->
     <a href="https://wa.me/5491152209156?text=Hola,%20me%20gustaria%20pedir%20mas%20informacion" class="whatsapp-float"
         target="_blank">
-        <img src="assets/images/WhatsApp.svg" alt="WhatsApp" />
+        <img src="assets/images/WhatsApp.svg" alt="WhatsApp" width="32" height="32" />
     </a>
 </body>
 

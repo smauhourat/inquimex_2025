@@ -5,16 +5,15 @@
        * Mobile nav toggle
        */
     const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+    const navIconOpen = mobileNavToggleBtn.querySelector('.icon-list');
+    const navIconClose = mobileNavToggleBtn.querySelector('.icon-close');
 
     function mobileNavToogle() {
         document.querySelector('body').classList.toggle('mobile-nav-active');
-        mobileNavToggleBtn.classList.toggle('bi-list');
-        mobileNavToggleBtn.classList.toggle('bi-x');
-        console.log('click');
+        navIconOpen.classList.toggle('d-none');
+        navIconClose.classList.toggle('d-none');
     }
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
-    console.log('caca')
 
     /**
      * Hide mobile nav on same-page/hash links
