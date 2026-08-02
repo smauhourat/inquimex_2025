@@ -1241,7 +1241,7 @@ h6,
 }
 
 .contact-form label {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--secondary-color);
     margin-bottom: 6px;
     display: inline-block;
