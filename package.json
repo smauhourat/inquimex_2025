@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanassets": "rimraf dist",
     "copyassets": "xcopy assets dist\\assets /s /e /q /y /i",
-    "build": "npm run cleanassets && npm run copyassets && node copypages"
+    "copycontacto": "xcopy contacto dist\\contacto /s /e /q /y /i",
+    "build": "npm run cleanassets && npm run copyassets && npm run copycontacto && node copypages"
   },
   "author": "",
   "license": "ISC",

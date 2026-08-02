@@ -6,5 +6,6 @@ import cpy from 'cpy';
     await cpy('productos.html', 'dist');
     await cpy('mercados.html', 'dist');
     await cpy('nosotros.html', 'dist');
+    await cpy('contacto.html', 'dist');
 
 })();
