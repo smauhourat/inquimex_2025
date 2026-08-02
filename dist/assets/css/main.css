@@ -14,13 +14,6 @@
     src: url('Urbane-Light.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Urbane';
-    font-style: normal;
-    font-weight: 300;
-    src: url('Urbane-Light.ttf') format('truetype');
-}
-
 html,
 body {
     width: 100%;
@@ -220,7 +213,6 @@ textarea {
     /* color: #aee8ff; */
     padding: 18px 12px;
     font-size: 1.2rem;
-    /* font-family: var(--nav-font); */
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -429,6 +421,8 @@ h6,
 .site-title,
 .site-title a {
     font-family: URBANE LIGHT, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-synthesis: none;
 }
 
 .section-title {
@@ -752,14 +746,14 @@ h6,
 
 .footer h6 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 300;
     color: #fffff8;
 }
 
 .footer-title {
     font-family: URBANE LIGHT, Helvetica, Arial, sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 300;
     color: #fffff8;
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -871,7 +865,7 @@ h6,
 
 .mercados .icon-box h4 {
     margin-left: 70px;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 15px;
     font-size: 18px;
 }
@@ -924,7 +918,7 @@ h6,
     border: none;
     color: var(--background-color);
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
     font-family: 'URBANE LIGHT';
 }
 
@@ -1021,7 +1015,7 @@ h6,
 
     .accordion-button-custom {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 300;
     }
 
     .whatsapp-float {
@@ -1081,7 +1075,6 @@ h6,
     .navmenu a:focus {
         color: #fffff0;
         padding: 10px 20px;
-        font-family: var(--nav-font);
         font-size: 17px;
         font-weight: 500;
         display: flex;
@@ -1241,7 +1234,7 @@ h6,
 }
 
 .contact-form label {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--secondary-color);
     margin-bottom: 6px;
     display: inline-block;
