@@ -16,7 +16,7 @@ return [
         'host'       => 'smtp.gmail.com', // TODO: confirmar con el hosting
         'auth'       => true,
         'username'   => 'web.inquimex@gmail.com',
-        'password'   => 'zheb ndob unyg fttr', // TODO: completar con la clave real
+        'password'   => 'COMPLETAR', // TODO: completar con la clave real
         'secure'     => 'tls',
         'port'       => 587,
         'debug'      => 0, // 0 para producción, 2 para desarrollo
