@@ -7,21 +7,24 @@ return [
     // Completar 'host' y 'password' con los datos reales que provee el hosting
     // (panel de cPanel / Webmail de la cuenta web@inquimex.com.ar).
     'smtp' => [
-        'host'       => 'mail.nobra.com.ar', // Obtener del panel de hosting DonWeb/Dattaweb
-        'auth'       => true,
-        'username'   => 'web@nobra.com.ar',
-        'password'   => 'PCFI@QS2pK',  // Completar con la clave r        
-        // 'host'       => 'mail.inquimex.com.ar', // TODO: confirmar con el hosting
+        // 'host'       => 'mail.nobra.com.ar', // Obtener del panel de hosting DonWeb/Dattaweb
         // 'auth'       => true,
-        // 'username'   => 'web@inquimex.com.ar',
-        // 'password'   => 'COMPLETAR_CONTRASENIA', // TODO: completar con la clave real
-        'secure'     => 'ssl',
-        'port'       => 465,
+        // 'username'   => 'web@nobra.com.ar',
+        // 'password'   => 'asdasdasdasdas@asdasd',  // Completar con la clave r        
+        // 'secure'     => 'ssl',
+        // 'port'       => 465,		
+        'host'       => 'smtp.gmail.com', // TODO: confirmar con el hosting
+        'auth'       => true,
+        'username'   => 'web.inquimex@gmail.com',
+        'password'   => 'zheb ndob unyg fttr', // TODO: completar con la clave real
+        'secure'     => 'tls',
+        'port'       => 587,
         'debug'      => 0, // 0 para producción, 2 para desarrollo
         'from_name'  => 'Inquimex · Formulario Web',
-        // 'recipient'  => 'web@inquimex.com.ar'
-        'recipient'  => 'santiago.mauhourat@gmail.com'
+        'recipient'  => 'web@inquimex.com.ar'
+        //'recipient'  => 'santiago.mauhourat@gmail.com'
     ],
+
 
     // 2. Google reCAPTCHA (desactivado por defecto)
     'recaptcha' => [
