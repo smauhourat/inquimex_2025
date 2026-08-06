@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inquimex.com.ar/sitemap.xml
