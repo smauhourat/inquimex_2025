@@ -39,7 +39,7 @@ return [
         'empresa'          => ['activo' => true, 'requerido' => true,  'label' => 'Empresa'],
         'industria'        => ['activo' => true, 'requerido' => true,  'label' => 'Industria'],
         'producto_interes' => ['activo' => true, 'requerido' => false, 'label' => 'Producto de Interés'],
-        'consumo'          => ['activo' => true, 'requerido' => true,  'label' => 'Consumo mensual esperado'],
+        'consumo'          => ['activo' => true, 'requerido' => false, 'label' => 'Consumo mensual esperado'],
         'consulta'         => ['activo' => true, 'requerido' => true,  'label' => 'Consulta'],
     ],
 

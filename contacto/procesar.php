@@ -127,7 +127,7 @@ try {
 
     // --- PRODUCTO DE INTERÉS ---
     $producto_interes = trim($_POST['producto_interes'] ?? '');
-    if ($conf['campos']['producto_interes']['requerido'] && $producto_interes === '') throw new Exception("El producto de interés es obligatorio.");
+    // if ($conf['campos']['producto_interes']['requerido'] && $producto_interes === '') throw new Exception("El producto de interés es obligatorio.");
     if ($producto_interes !== '' && !validarTextoGeneral($producto_interes)) throw new Exception("El Producto de Interés contiene caracteres no válidos.");
 
     // --- CONSUMO MENSUAL ESPERADO ---

@@ -1259,6 +1259,11 @@ h6,
     display: inline-block;
 }
 
+.contact-form label .required {
+    color: #dc3545;
+    font-weight: 600;
+}
+
 .contact-form .form-control,
 .contact-form .form-select {
     border: 1px solid #d7d7d7;
